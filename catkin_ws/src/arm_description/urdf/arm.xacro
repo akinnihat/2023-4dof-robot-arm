@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find arm_description)/urdf/arm.trans" />
+<xacro:include filename="$(find arm_description)/urdf/arm.gazebo" />
+
+
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0125" rpy="0 0 0"/>
+    <mass value="0.5548838024402973"/>
+    <inertia ixx="0.000154" iyy="0.000154" izz="0.00025" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Platform_1">
+  <inertial>
+    <origin xyz="1.2106877832099407e-14 8.586438178793906e-18 0.024342559907098243" rpy="0 0 0"/>
+    <mass value="2.0787238143023408"/>
+    <inertia ixx="0.00147" iyy="0.003108" izz="0.003539" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Platform_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Platform_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="D2_1">
+  <inertial>
+    <origin xyz="0.015 0.0 0.08469568327292498" rpy="0 0 0"/>
+    <mass value="0.6577489881478827"/>
+    <inertia ixx="0.006402" iyy="0.006409" izz="0.000181" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015 -0.0 -0.0625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015 -0.0 -0.0625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="D3_1">
+  <inertial>
+    <origin xyz="0.014999999999999958 -1.1804267164782249e-17 0.06749406762008453" rpy="0 0 0"/>
+    <mass value="0.7634276110018746"/>
+    <inertia ixx="0.006149" iyy="0.006661" izz="0.000708" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015 0.0 -0.3385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015 0.0 -0.3385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="D4_1">
+  <inertial>
+    <origin xyz="9.723077481125942e-17 0.01461192581321165 0.03300377103466645" rpy="0 0 0"/>
+    <mass value="0.03728803268567669"/>
+    <inertia ixx="1.5e-05" iyy="2.6e-05" izz="1.4e-05" ixy="0.0" iyz="-3e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.5885" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.5885" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/D4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Finger_1_1">
+  <inertial>
+    <origin xyz="-0.005466749294592968 -6.938893903907228e-18 0.03199999999999992" rpy="0 0 0"/>
+    <mass value="0.044849201864543935"/>
+    <inertia ixx="1.6e-05" iyy="1.6e-05" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0475 -0.0175 -0.641" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0475 -0.0175 -0.641" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Finger_2_1">
+  <inertial>
+    <origin xyz="0.005466749294592975 -6.938893903907228e-18 0.03199999999999992" rpy="0 0 0"/>
+    <mass value="0.044849201864543935"/>
+    <inertia ixx="1.6e-05" iyy="1.6e-05" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0475 -0.0175 -0.641" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0475 -0.0175 -0.641" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_description/meshes/Finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="D1" type="continuous">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Platform_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="D2" type="fixed">
+  <origin xyz="-0.015 0.0 0.0375" rpy="0 0 0"/>
+  <parent link="Platform_1"/>
+  <child link="D2_1"/>
+</joint>
+
+<joint name="D3" type="continuous">
+  <origin xyz="0.0 -0.0 0.276" rpy="0 0 0"/>
+  <parent link="D2_1"/>
+  <child link="D3_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="D4" type="continuous">
+  <origin xyz="0.015 0.0 0.25" rpy="0 0 0"/>
+  <parent link="D3_1"/>
+  <child link="D4_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="G1" type="continuous">
+  <origin xyz="0.0475 0.0175 0.0525" rpy="0 0 0"/>
+  <parent link="D4_1"/>
+  <child link="Finger_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="G2" type="continuous">
+  <origin xyz="-0.0475 0.0175 0.0525" rpy="0 0 0"/>
+  <parent link="D4_1"/>
+  <child link="Finger_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.0" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>

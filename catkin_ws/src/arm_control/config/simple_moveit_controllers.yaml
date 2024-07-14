@@ -1,0 +1,15 @@
+controller_list:
+  - name: gripper_control
+    action_ns: gripper_action
+    type: GripperCommand
+    default: True
+    joints:
+      - D4
+      - Slider_5
+      - Slider_6
+  - name: arm_vel_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      []

@@ -1,0 +1,5 @@
+float64 position_d1
+float64 position_d2
+float64 position_d3
+float64 position_d4
+bool is_gripper_active
