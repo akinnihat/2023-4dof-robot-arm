@@ -63,7 +63,9 @@ rosrun rosserial_python serial_node.py _port:=/dev_ttyUSB0 _baud:=115200
 <img src="https://github.com/user-attachments/assets/a36d84d8-d582-4cf7-8d84-0f455b69df8a" width="384">
 
 ## Pick and Place
-<img src="https://github.com/user-attachments/assets/624f2628-760b-4fc2-ad30-154f14537334" width="384">
+
+https://github.com/user-attachments/assets/624f2628-760b-4fc2-ad30-154f14537334
+
 
 ## Additional Notes
 Some of the flaws made during the development of the project and the points that could have been done better are briefly as follows:
